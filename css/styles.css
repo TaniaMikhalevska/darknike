@@ -1,0 +1,206 @@
+:root {
+
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+	transition: all .3s ease-in-out;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+body {
+    height: 100%;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+/* Main Styles */
+@font-face {
+    font-family: MuseoSansRounded;
+    src: url('fonts/Museo/MuseoSansRounded-100.eot');
+    src: url('fonts/Museo/MuseoSansRounded-100.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Museo/MuseoSansRounded-100.woff2') format('woff2'),
+        url('fonts/Museo/MuseoSansRounded-100.woff') format('woff'),
+        url('fonts/Museo/MuseoSansRounded-100.ttf') format('truetype'),
+        url('fonts/Museo/MuseoSansRounded-100.svg#MuseoSansRounded-100') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+body {
+    background: url(../images/bg1.png) no-repeat  40% 75%, url(../images/bg2.jpg) no-repeat;
+    background-size: 150% , cover;
+    min-width: 800px;
+    min-height: 600px;
+}
+.container {
+    width: 690px;
+    padding: 0 20px;
+    height: 390px;
+    margin: 110px auto 100px;
+    background: #111a28;
+    border-radius: 10px;
+    box-shadow:  0 0 65px 0 rgba(0,0,0, .82); 
+}
+.header {
+    height: 72px;
+    width: 100%;
+}
+.logo {
+    padding-top: 24px;
+}
+.logo__link:hover {
+ transform: scale(1.05) rotate(-2deg);
+}
+.logo__link {
+    display: block;
+    width: 68px;
+    height: 36px;
+    background: url(../images/logo.png) no-repeat;
+    background-size: cover;
+}
+.item {
+    overflow: hidden;
+}
+.slider {
+    width: 61%;
+    float: left;
+}
+
+.item-img {
+    display: block;
+    margin: 55px auto 70px;
+}
+.item-img:hover {
+    transform: scale(1.05) rotate(-10deg);
+}
+.slider-view {
+    font-size: 0;
+    text-align: center; 
+    line-height: 16px;    
+}
+.slider-view__item {
+    display: inline-block;
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    margin-right: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.slider-view:hover .slider-view__item:not(:hover) {
+    opacity: .4;
+}
+.slider-view__item--active {
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, .3);
+    background-color: rgba(255, 255, 255, .1); 
+    position: relative;
+    top: 3px;
+}
+.slider-view__item:nth-child(3n+3) {
+    background: #ed3333;
+}
+.slider-view__item:nth-child(4n+4) {
+    background: #29e3ea;
+}
+.slider-view__item:last-child {
+    margin-right: 0;
+}
+.item-content {
+    float: right;
+    text-align: left;
+    width: 30%;
+    margin-right: 4%;
+    margin-left: 5%;
+    font-family: MuseoSansRounded, sans-serif;
+    font-weight: 100;
+}
+.item-content__name {
+    font-size: 24px;
+    color: #e1e1e1;
+    margin-bottom: 15px;
+}
+.item-content__description {
+    font-size: 14px;
+    color: rgba(225, 225, 225, .54); 
+    margin-bottom: 26px;
+}
+.rating {
+    margin-bottom: 26px;
+
+}
+.rating__view {
+    font-size: 0;
+}
+.rating__item {
+    display: inline-block;
+    margin-right: 1px;
+    font-size: 13px;
+    color: #9da1a6;
+}
+.rating__item--positive {
+    color: #f7bf16;
+}
+
+.form select {
+    float: left;
+    margin-bottom: 30px;
+    appearance: none;
+    -webkit-appearance:none;
+    width: 70px;
+    background: #111a28 url(../images/arrow.png) no-repeat 83% 55%; 
+    color: rgba(225, 225, 225, .8);
+    font-size: 14px;
+    padding: 9px 9px 9px 8px;
+    border: 1px solid #4f5560;
+    cursor: pointer;
+}
+.form select:hover {
+    border: 1px solid rgba(255, 255, 255, .46);
+}
+.size {
+    margin-right: 2px;
+}
+.btn-add {
+    clear: both;
+    width: 185px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, .16);
+    border: 1px solid rgba(255, 255, 255, .36);
+    font: 100 14px/44px Museo, sans-serif;
+    color: rgba(225, 225, 225, .8);
+    cursor: pointer;
+    
+}
+.btn-add:hover {
+    background: rgba(255, 255, 255, .26);
+    border: 1px solid rgba(255, 255, 255, .46);
+    transform: scale(1.01);
+}
+
